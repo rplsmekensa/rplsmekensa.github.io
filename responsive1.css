@@ -1,0 +1,124 @@
+/* General Styles for all devices */
+body {
+    padding: 0;
+    font-family: 'Open Sans', Arial, 'Helvetica Neue', Helvetica;
+    margin: 0;
+}
+
+/* Adjustments for smartphone screens */
+@media (max-width: 768px) {
+    .wrapper {
+        width: 100%;
+        padding: 0 15px;  /* Padding inside the wrapper to prevent content overflow */
+        margin: 0 auto;
+        box-sizing: border-box;
+    }
+
+    .nav-name {
+        width: 100%;
+        text-align: center;
+        float: none;
+        margin-bottom: 15px;  /* Space below the logo or name */
+    }
+
+    .navigation {
+        width: 100%;
+        text-align: center;
+        float: none;
+        margin-bottom: 20px;  /* Space below the navigation */
+    }
+
+    .navigation ul {
+        padding: 0;
+        margin: 0;
+        text-align: center;
+    }
+
+    .navigation ul li {
+        display: inline-block;
+        float: none;
+        padding: 10px 5px;  /* Adjust padding for better spacing */
+    }
+
+    .hero-left,
+    .hero-right {
+        width: 100%;
+        float: none;
+        margin: 20px 0;  /* Margin between hero sections */
+        text-align: center;
+    }
+
+    .hero-left h2 {
+        font-size: 28px;  /* Slightly smaller font size */
+    }
+
+    .hero-left p {
+        font-size: 14px;
+        text-align: center;
+        white-space: normal;
+        margin: 10px 0;  /* Margin for better spacing */
+    }
+
+    .hero-left a {
+        margin-top: 20px;
+        left: 0;
+        width: 100%;
+        display: inline-block;
+        padding: 12px 0;  /* Padding adjustment for button */
+    }
+
+    .hero-right img {
+        width: 100%;
+        height: auto;
+        margin-top: 15px;  /* Reduced margin for tighter layout */
+    }
+
+    .info-section {
+        padding: 20px 15px;  /* Padding around info section */
+    }
+
+    .info {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .info h3 {
+        font-size: 24px;  /* Slightly reduced font size */
+        margin-bottom: 15px;  /* Margin below headings */
+    }
+
+    .message-form {
+        padding: 20px;
+        max-width: 100%;
+        margin: 20px auto;  /* Centered and spaced */
+    }
+
+    .message-form input,
+    .message-form textarea {
+        margin-bottom: 15px;  /* Space between input fields */
+    }
+
+    .message-form button {
+        width: 100%;
+        padding: 15px;  /* Adjusted padding for button */
+    }
+}
+
+/* Adjustments for small devices (phones in landscape mode) */
+@media (max-width: 480px) {
+    .hero-left h2 {
+        font-size: 24px;
+    }
+
+    .hero-left p {
+        font-size: 12px;
+    }
+
+    .info h3 {
+        font-size: 20px;
+    }
+
+    .message-form h2 {
+        font-size: 22px;
+    }
+}
