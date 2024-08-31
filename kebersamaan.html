@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kebersamaan</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        .container {
+            position: relative;
+            bottom: 30px;
+            width: 100%;
+        }
+
+        .wrapper {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            display: block;
+            overflow: hidden;
+        }
+
+        .nav {
+            margin-top: 25px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .nav-name {
+            font-style: italic;
+            font-weight: bold;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+
+        .navigation {
+            font-weight: bold;
+        }
+
+        .navigation ul {
+            display: flex;
+            flex-wrap: wrap;
+            padding: 0;
+        }
+
+        .navigation ul li {
+            list-style: none;
+            padding: 0 20px;
+            padding-top: 25px;
+        }
+
+        ul li a {
+            text-decoration: none;
+            color: blue;
+        }
+
+        /* Search Bar Styling */
+        .search-bar {
+            margin-top: 20px;
+            text-align: center;
+            width: 100%;
+            padding: 0 15px;
+            box-sizing: border-box;
+        }
+
+        .search-bar input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            border: 2px solid #ddd;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+
+        .gallery-container {
+            width: 100%;
+            max-width: 1200px;
+            margin-top: 20px;
+            text-align: center;
+            padding: 0 15px;
+            box-sizing: border-box;
+        }
+
+        .gallery-container h1 {
+            font-size: 2.5rem;
+            color: #333;
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .gallery-item {
+            position: relative;
+        }
+
+        .gallery img {
+            width: 100%;
+            aspect-ratio: 16/9;
+            object-fit: cover;
+            border-radius: 15px;
+            border: 5px solid #ddd;
+            transition: transform 0.3s ease, border-color 0.3s ease;
+        }
+
+        .gallery img:hover {
+            transform: scale(1.05);
+            border-color: #888;
+        }
+
+        .gallery-caption {
+            position: absolute;
+            bottom: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            padding: 5px 10px;
+            border-radius: 10px;
+            font-size: 1rem;
+        }
+
+        .video-container {
+            width: 100%;
+            max-width: 1200px;
+            margin-top: 50px;
+            text-align: center;
+            padding: 0 15px;
+            box-sizing: border-box;
+        }
+
+        .video-container h2 {
+            font-size: 2.5rem;
+            color: #333;
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+
+        .videos {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .video {
+            position: relative;
+        }
+
+        .video video {
+            width: 100%;
+            height: auto;
+            border-radius: 15px;
+            border: 5px solid #ddd;
+            transition: transform 0.3s ease, border-color 0.3s ease;
+        }
+
+        .video video:hover {
+            transform: scale(1.05);
+            border-color: #888;
+        }
+
+        .footer {
+            margin-top: 20px;
+            background-color: black;
+            color: white;
+            text-align: center;
+            font-style: italic;
+            padding: 15px;
+            width: 100%;
+        }
+
+        @media (max-width: 600px) {
+            .gallery-container h1,
+            .video-container h2 {
+                font-size: 1.8rem;
+            }
+
+            .search-bar input[type="text"] {
+                width: 100%;
+            }
+        }
+        @media (max-width: 480px){
+            .nav-name{
+                position: relative;
+                left: 160px;
+            }
+            .navigation{
+                margin-top: 10px;
+            }
+            .navigation ul li{
+                padding: 0px 5px;
+                font-size: 15px;
+                text-align: center;
+                width: 100px;
+                position: relative;
+                left: 45px;
+
+            }
+            .search-bar{
+                width: 200px;
+                margin: 0 auto;
+            }
+            .gallery-container{
+                width: 300px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="wrapper">
+            <div class="nav">
+                <div class="nav-name">
+                    RPLSite
+                </div>
+                <div class="navigation">
+                    <ul>
+                        <li><a href="homepage.html">Beranda</a></li>
+                        <li><a href="kebersamaan.html">Kebersamaan</a></li>
+                        <li><a href="roster.html">Roster</a></li>
+                        <li><a href="informasi.html">Informasi</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="search-bar">
+        <input type="text" id="searchInput" placeholder="Cari gambar berdasarkan judul..." onkeyup="searchImages()">
+    </div>
+
+    <div class="gallery-container">
+        <h1>Foto Kami</h1>
+        <div class="gallery" id="gallery">
+            <div class="gallery-item" data-title="gambar 1">
+                <img src="https://via.placeholder.com/300x200" alt="Foto 1">
+                <div class="gallery-caption">Gambar 1</div>
+            </div>
+            <div class="gallery-item" data-title="gambar 2">
+                <img src="https://via.placeholder.com/300x200" alt="Foto 2">
+                <div class="gallery-caption">Gambar 2</div>
+            </div>
+            <div class="gallery-item" data-title="gambar 3">
+                <img src="https://via.placeholder.com/300x200" alt="Foto 3">
+                <div class="gallery-caption">Gambar 3</div>
+            </div>
+            <div class="gallery-item" data-title="gambar 4">
+                <img src="https://via.placeholder.com/300x200" alt="Foto 4">
+                <div class="gallery-caption">Gambar 4</div>
+            </div>
+            <div class="gallery-item" data-title="gambar 5">
+                <img src="https://via.placeholder.com/300x200" alt="Foto 5">
+                <div class="gallery-caption">Gambar 5</div>
+            </div>
+            <div class="gallery-item" data-title="gambar 6">
+                <img src="https://via.placeholder.com/300x200" alt="Foto 6">
+                <div class="gallery-caption">Gambar 6</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="video-container">
+        <h2>Video Kami</h2>
+        <div class="videos">
+            <div class="video" data-title="video 1">
+                <video src="● KetikSendiri.java - tugas java - Visual Studio Code 2024-04-29 07-12-54.mp4" controls></video>
+                <div class="gallery-caption">Video Java</div>
+            </div>
+            <div class="video" data-title="video 2">
+                <video src="video2.mp4" controls></video>
+                <div class="gallery-caption">Video 2</div>
+            </div>
+            <div class="video" data-title="video 3">
+                <video src="video3.mp4" controls></video>
+                <div class="gallery-caption">Video 3</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <div class="wrapper">
+            <div class="footer-content">
+                <p>RPL SMKN1 Pematangsiantar 2024. All rights reserved.</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="../script/script.js"></script>
+    <script>
+        function searchImages() {
+            const input = document.getElementById('searchInput').value.toLowerCase();
+            const galleryItems = document.querySelectorAll('.gallery-item');
+            const videoItems = document.querySelectorAll('.video');
+
+            galleryItems.forEach(item => {
+                const title = item.getAttribute('data-title').toLowerCase();
+                if (title.includes(input)) {
+                    item.style.display = 'block';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+
+            videoItems.forEach(item => {
+                const title = item.getAttribute('data-title').toLowerCase();
+                if (title.includes(input)) {
+                    item.style.display = 'block';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+        }
+    </script>
+</body>
+</html>

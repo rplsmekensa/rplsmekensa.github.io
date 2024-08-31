@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Roster</title>
+    <style>
+        body {
+            padding: 0;
+            margin: 0;
+            font-family: 'Open Sans', Arial, sans-serif;
+            background-color: #f0f0f0;
+            color: #333;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .wrapper {
+    width: 1200px;
+    margin: 0 auto;
+    display: block;
+    overflow: hidden;
+}
+.nav {
+            margin-top: -40px;
+        }
+
+.nav-name {
+    float: left;
+    width: 200px;
+    font-style: italic;
+    font-weight: bold;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.navigation {
+    width: 1000px;
+    font-weight: bold;
+}
+
+.navigation ul li {
+    float: left;
+    list-style: none;
+    padding: 0 20px;
+    padding-top: 25px;
+}
+
+ul li a {
+    text-decoration: none;
+}
+        .header {
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        .header h1 {
+            font-size: 2em;
+            margin: 0;
+            font-weight: bold;
+            color: #007bff;
+        }
+
+        .schedule {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .day {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 15px;
+        }
+
+        .day h2 {
+            text-align: center;
+            color: #007bff;
+            margin-bottom: 10px;
+        }
+
+        .time-slot {
+            margin-bottom: 10px;
+        }
+
+        .time-slot p {
+            margin: 0;
+            padding: 10px;
+            background-color: #e9ecef;
+            border-radius: 5px;
+        }
+
+        .time-slot p.subject {
+            font-weight: bold;
+            background-color: #ffc107;
+            color: #fff;
+        }
+        .footer{
+    margin-top: 20px;
+    background-color: black;
+    color: white;
+    text-align: center;
+    font-style: italic;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+/* Existing styles here... */
+
+/* Add this media query for responsiveness on smartphones */
+@media only screen and (max-width: 768px) {
+    .container {
+        padding: 10px;
+    }
+
+    .wrapper {
+        width: 100%;
+    }
+
+    .nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px;
+    }
+
+    .nav-name {
+        font-size: 1.5em;
+    }
+
+    .navigation {
+        position: fixed;
+        left: -100%;
+        top: 0;
+        height: 100%;
+        width: 250px;
+        background-color: #333;
+        transition: left 0.3s ease;
+        z-index: 1000;
+        overflow-y: auto; /* Fix for scrollable navigation on small screens */
+    }
+
+    .navigation ul {
+        list-style-type: none;
+        padding: 0;
+        margin-top: 60px;
+    }
+
+    .navigation ul li {
+        padding: 15px;
+        text-align: left;
+        border-bottom: 1px solid #444;
+    }
+
+    .navigation ul li a {
+        color: #fff;
+        text-decoration: none;
+        display: block;
+    }
+
+    .menu-toggle {
+        font-size: 1.5em;
+        cursor: pointer;
+        color: #333;
+    }
+
+    .navigation.active {
+        left: 0;
+    }
+
+    .schedule {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+
+    .day {
+        padding: 10px;
+    }
+
+    .header h1 {
+        font-size: 1.8em;
+    }
+
+    .footer {
+        padding: 10px;
+    }
+
+    .footer-content {
+        font-size: 0.9em;
+    }
+}
+
+/* Ensure original layout is preserved on larger screens */
+@media only screen and (min-width: 769px) {
+    .nav {
+        margin-top: -40px;
+    }
+
+    .nav-name {
+        float: left;
+        width: 200px;
+    }
+
+    .navigation {
+        width: 1000px;
+        font-weight: bold;
+    }
+
+    .navigation ul {
+        display: flex;
+        padding: 0;
+        margin: 0;
+    }
+
+    .navigation ul li {
+        float: left;
+        list-style: none;
+        padding: 0 20px;
+        padding-top: 25px;
+    }
+
+    .navigation ul li a {
+        text-decoration: none;
+        color: #333; /* Ensure the links are visible */
+    }
+}
+
+
+
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="wrapper">
+        <div class="nav">
+            <h2 class="nav-name">
+                RPLSite
+            </h2>
+            <span class="menu-toggle">&#9776;</span>
+            <nav class="navigation">
+                <ul>
+                    <li><a href="homepage.html">Beranda</a></li>
+                    <li><a href="kebersamaan.html">Kebersamaan</a></li>
+                    <li><a href="roster.html">Roster</a></li>
+                    <li><a href="informasi.html">Informasi</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+
+    <div class="header">
+        <h1>Roster Pelajaran</h1>
+    </div>
+
+    <div class="schedule">
+        <!-- Senin -->
+        <div class="day">
+            <h2>Senin</h2>
+            <div class="time-slot">
+                <p class="subject">PBO</p>
+                <p>07:00 - 09:00</p>
+            </div>
+            <div class="time-slot">
+                <p class="subject">Mulok RPL</p>
+                <p>09:00 - 11:00</p>
+            </div>
+            <div class="time-slot">
+                <p class="subject">PJTDM</p>
+                <p>11:00 - 13:00</p>
+            </div>
+        </div>
+
+        <!-- Selasa -->
+        <div class="day">
+            <h2>Selasa</h2>
+            <div class="time-slot">
+                <p class="subject">PKK</p>
+                <p>07:00 - 09:00</p>
+            </div>
+            <div class="time-slot">
+                <p class="subject">B. Inggris</p>
+                <p>09:00 - 11:00</p>
+            </div>
+            <div class="time-slot">
+                <p class="subject">PJOK</p>
+                <p>11:00 - 13:00</p>
+            </div>
+        </div>
+
+        <!-- Rabu -->
+        <div class="day">
+            <h2>Rabu</h2>
+            <div class="time-slot">
+                <p class="subject">BD</p>
+                <p>07:00 - 09:00</p>
+            </div>
+            <div class="time-slot">
+                <p class="subject">PWPB</p>
+                <p>09:00 - 11:00</p>
+            </div>
+            <div class="time-slot">
+                <p class="subject">B. Indonesia</p>
+                <p>11:00 - 13:00</p>
+            </div>
+        </div>
+
+        <!-- Kamis -->
+        <div class="day">
+            <h2>Kamis</h2>
+            <div class="time-slot">
+                <p class="subject">PAI/PPKN</p>
+                <p>07:00 - 09:00</p>
+            </div>
+            <div class="time-slot">
+                <p class="subject">Seni Budaya</p>
+                <p>09:00 - 11:00</p>
+            </div>
+            <div class="time-slot">
+                <p class="subject">PWPB</p>
+                <p>11:00 - 13:00</p>
+            </div>
+        </div>
+
+        <!-- Jumat -->
+        <div class="day">
+            <h2>Jumat</h2>
+            <div class="time-slot">
+                <p class="subject">MTK</p>
+                <p>07:00 - 09:00</p>
+            </div>
+            <div class="time-slot">
+                <p class="subject">PKK</p>
+                <p>09:00 - 11:00</p>
+            </div>
+            <div class="time-slot">
+                <p class="subject">Sejarah</p>
+                <p>11:00 - 13:00</p>
+            </div>
+        </div>
+
+        <!-- Sabtu -->
+        <div class="day">
+            <h2>Sabtu</h2>
+            <div class="time-slot">
+                <p class="subject">B. Inggris</p>
+                <p>07:00 - 09:00</p>
+            </div>
+            <div class="time-slot">
+                <p class="subject">B. Indonesia</p>
+                <p>09:00 - 11:00</p>
+            </div>
+            <div class="time-slot">
+                <p class="subject">PKK</p>
+                <p>11:00 - 13:00</p>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="footer">
+    <div class="wrapper">
+        <div class="footer-content">
+        <p>RPL SMKN1 Pematangsiantar 2024. All rights reserved.</p>
+        </div>
+    </div>
+</div>
+<script>
+    document.querySelector('.menu-toggle').addEventListener('click', function() {
+    document.querySelector('.navigation').classList.toggle('active');
+});
+
+</script>
+</body>
+</html>
